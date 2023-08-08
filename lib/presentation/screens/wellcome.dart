@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:threads/core/extensions.dart';
+import 'package:threads/core/constants.dart';
 import 'package:threads/presentation/screens/login.dart';
 
 class WellcomeScreen extends StatelessWidget {
@@ -39,7 +39,7 @@ class WellcomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "Login in with Instagram",
+                      "Login with Instagram",
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
