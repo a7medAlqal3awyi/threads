@@ -18,7 +18,7 @@ environment:
 dependencies:
   # packages that used
   icon_broken: ^1.1.0
-
+  font_awesome_flutter: any
 
   flutter:
     sdk: flutter
