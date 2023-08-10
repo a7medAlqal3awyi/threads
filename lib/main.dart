@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:threads/presentation/screens/bottom_bar/bottom_bar.dart';
+import 'package:threads/presentation/screens/home/home.dart';
 import 'package:threads/presentation/screens/wellcome.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
 
       ),
-      home: const WellcomeScreen(),
+      home: const BottomBar(),
     );
   }
 }
