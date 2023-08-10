@@ -22,7 +22,7 @@ class WellcomeScreen extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              context.push(const LoginScreen());
+              context.push( LoginScreen());
             },
             child: Container(
               margin: const EdgeInsets.all(8),

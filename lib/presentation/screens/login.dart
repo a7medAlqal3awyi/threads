@@ -2,14 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:threads/core/extensions.dart';
 import 'package:threads/presentation/screens/bottom_bar/bottom_bar.dart';
-import 'package:threads/presentation/screens/home/home.dart';
 import 'package:threads/presentation/widgets/custom_text_button.dart';
 import 'package:threads/presentation/widgets/text_form_of_auth.dart';
 
 import '../widgets/custom_button.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+   LoginScreen({super.key,});
+
+  var formKey = GlobalKey<FormState>();
+
+  final emailController = TextEditingController();
+
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,22 +37,30 @@ class LoginScreen extends StatelessWidget {
                 const Spacer(),
                 Image.asset("assets/images/insta_logo.png"),
                 Gap(context.deviceHeight / 30),
-                const AuthTextFormField(
+                AuthTextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  textEditingController: emailController,
                   labelText: 'User name,email or mobile num...',
                 ),
                 Gap(context.deviceHeight / 90),
-                const AuthTextFormField(
+                AuthTextFormField(
+                  textEditingController: passwordController,
+                  keyboardType: TextInputType.visiblePassword,
+                  suffix: Icons.remove_red_eye_rounded,
                   labelText: 'Password',
                 ),
                 Gap(context.deviceHeight / 90),
-                Gap(context.deviceHeight / 300),
                 CustomButton(
                   label: "Log in",
                   onPressed: () {
                     context.push(const BottomBar());
                   },
                 ),
-                 CustomTextButton(text: "Forgot Password?",onPressed: (){},),
+                Gap(context.deviceHeight / 300),
+                CustomTextButton(
+                  text: "Forgot Password?",
+                  onPressed: () {},
+                ),
                 const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
