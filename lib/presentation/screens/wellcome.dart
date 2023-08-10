@@ -25,7 +25,7 @@ class WellcomeScreen extends StatelessWidget {
               context.push(const LoginScreen());
             },
             child: Container(
-              margin: const EdgeInsets.all(10),
+              margin: const EdgeInsets.all(8),
               width: double.infinity,
               height: 85,
               decoration: BoxDecoration(
@@ -41,7 +41,7 @@ class WellcomeScreen extends StatelessWidget {
                     const Text(
                       "Login in with Instagram",
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 17,
                           fontWeight: FontWeight.w400,
                           color: Colors.grey),
                     ),
