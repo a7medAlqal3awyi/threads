@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
-import 'package:threads/core/extensions.dart';
+import 'package:threads/core/constants.dart';
 import 'package:threads/presentation/screens/bottom_bar/bottom_bar.dart';
 import 'package:threads/presentation/widgets/custom_text_button.dart';
 import 'package:threads/presentation/widgets/text_form_of_auth.dart';
@@ -22,7 +23,9 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: const Color(0xFF0F212F),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: context.deviceWidth / 15),
+          padding: EdgeInsets.symmetric(
+              horizontal: context.deviceWidth / 15
+          ),
           child: SizedBox(
             height: context.deviceHeight,
             child: Column(
@@ -35,7 +38,9 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.grey, fontSize: 16),
                 ),
                 const Spacer(),
-                Image.asset("assets/images/insta_logo.png"),
+                const Icon(FontAwesomeIcons.instagram,
+                size: 50,),
+                // Image.asset("assets/images/insta_logo.png"),
                 Gap(context.deviceHeight / 30),
                 AuthTextFormField(
                   keyboardType: TextInputType.emailAddress,
@@ -61,6 +66,7 @@ class LoginScreen extends StatelessWidget {
                   text: "Forgot Password?",
                   onPressed: () {},
                 ),
+
                 const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

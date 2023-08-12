@@ -11,6 +11,7 @@ dependencies:
   # packages that used
   icon_broken: ^1.1.0
   gap: ^3.0.1
+  font_awesome_flutter: any
 
 
   flutter:
