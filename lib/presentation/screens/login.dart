@@ -9,7 +9,9 @@ import 'package:threads/presentation/widgets/text_form_of_auth.dart';
 import '../widgets/custom_button.dart';
 
 class LoginScreen extends StatelessWidget {
-   LoginScreen({super.key,});
+  LoginScreen({
+    super.key,
+  });
 
   var formKey = GlobalKey<FormState>();
 
@@ -23,9 +25,7 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: const Color(0xFF0F212F),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: context.deviceWidth / 15
-          ),
+          padding: EdgeInsets.symmetric(horizontal: context.deviceWidth / 15),
           child: SizedBox(
             height: context.deviceHeight,
             child: Column(
@@ -38,8 +38,10 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.grey, fontSize: 16),
                 ),
                 const Spacer(),
-                const Icon(FontAwesomeIcons.instagram,
-                size: 50,),
+                const Icon(
+                  FontAwesomeIcons.instagram,
+                  size: 50,
+                ),
                 // Image.asset("assets/images/insta_logo.png"),
                 Gap(context.deviceHeight / 30),
                 AuthTextFormField(

@@ -6,6 +6,8 @@ import 'package:threads/presentation/screens/login.dart';
 import 'package:threads/presentation/widgets/custom_button.dart';
 import 'package:threads/presentation/widgets/text_form_of_auth.dart';
 
+import 'bottom_bar/bottom_bar.dart';
+
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
@@ -67,7 +69,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   textEditingController: passwordController,
                 ),
                 Gap(context.deviceHeight / 70),
-                const CustomButton(
+                 CustomButton(
+                  onPressed: (){
+                    context.push(const BottomBar());
+                  },
                   label: "Register",
                 ),
                 Row(
