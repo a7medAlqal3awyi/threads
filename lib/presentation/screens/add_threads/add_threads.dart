@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:threads/core/constants.dart';
 class AddThreads extends StatelessWidget {
   const AddThreads({super.key});
 
@@ -15,12 +16,11 @@ class AddThreads extends StatelessWidget {
           icon: const Icon(
             Icons.close,
           ),
-
         ),
         actions:
-        const [
+         [
           Padding(
-            padding: EdgeInsets.only(right: 235.0),
+            padding: EdgeInsets.symmetric(horizontal: context.deviceWidth / 25),
             child: Text(
               'New thread',
               style: TextStyle(
@@ -35,16 +35,15 @@ body: Column(
   children:
   [
     const Padding(
-      padding: EdgeInsets.only(top: 8.0,left: 8),
+      padding: EdgeInsets.symmetric(horizontal: 8.0,vertical: 8),
       child: Row(
         children:
         [
 Padding(
-  padding: EdgeInsets.all(8.0),
+  padding: EdgeInsets.symmetric(vertical: 8.0,horizontal: 8),
   child:   CircleAvatar(
       radius: 25,
       foregroundImage: AssetImage('assets/images/ahmed.jpg'),
-
   ),
 ),
 SizedBox(width: 10,),
